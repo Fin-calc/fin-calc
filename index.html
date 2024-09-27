@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фін Калькулятор</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Калькулятор</h1>
+        
+        <div class="columns">
+            <div class="column">
+                <h2>Укр ЦП</h2>
+                <input type="text" class="display" id="ukrDisplay" disabled>
+                <div class="checkboxes">
+                    <label><input type="checkbox" value="2" onchange="calculateSum('ukr')"> Вода Україна (2%)</label><br>
+                    <label><input type="checkbox" value="3" onchange="calculateSum('ukr')"> Вода Глобал (3%)</label><br>
+                    <label><input type="checkbox" value="2.5" onchange="calculateSum('ukr')"> БН $ (2.50%)</label><br>
+                    <label><input type="checkbox" value="2.2" onchange="calculateSum('ukr')"> БН € (2.20%)</label><br>
+                    <label><input type="checkbox" value="2.3" onchange="calculateSum('ukr')"> USDT (2.30%)</label><br>
+                    <label><input type="checkbox" value="0.4" onchange="calculateSum('ukr')"> Вітер НР - Mau (0.40%)</label><br>
+                    <label><input type="checkbox" value="0.75" onchange="calculateSum('ukr')"> Вітер НР Payally (0.75%)</label><br>
+                    <label><input type="checkbox" value="0.4" onchange="calculateSum('ukr')"> Вітер НР Adriatic (0.40%)</label><br>
+                    <label><input type="checkbox" value="0.5" onchange="calculateSum('ukr')"> Оф. Ком банк - Adriatic (0.50%)</label><br>
+                    <label><input type="checkbox" value="0.6" onchange="calculateSum('ukr')"> Брокери - MSL (0.60%)</label><br>
+                    <label><input type="checkbox" value="0.5" onchange="calculateSum('ukr')"> Брокери - T-M (0.50%)</label><br>
+                    <label><input type="checkbox" value="0.1" onchange="calculateSum('ukr')"> Брокери - Укр. (0.10%)</label><br>
+                    <label><input type="checkbox" value="0.1" onchange="calculateSum('ukr')"> Агентські (0.10%)</label><br>
+                    <label><input type="checkbox" value="0.1" onchange="calculateSum('ukr')"> Утримання компаній НР (0.10%)</label><br>
+                    <label><input type="checkbox" value="0.5" onchange="calculateSum('ukr')"> Утримання компаній резидентів (0.50%)</label><br>
+                    <label><input type="checkbox" value="1.60" onchange="calculateSum('ukr')"> Криптофр. Платіжки - Banxy (1.60%)</label><br>
+                    <label><input type="checkbox" value="1.85" onchange="calculateSum('ukr')"> Криптофр. Платіжки - Axom (1.85%)</label><br>
+                    <label><input type="checkbox" value="1.13" onchange="calculateSum('ukr')"> Криптофр. Платіжки - Payally (1.13%)</label><br>
+                    <label><input type="checkbox" value="0.3" onchange="calculateSum('ukr')"> Криптофр. Платіжки - OneGate (0.30%)</label><br>
+                </div>
+            </div>
+            
+            <div class="column">
+                <h2>Трежеря - бонди</h2>
+                <input type="text" class="display" id="treasuryDisplay" disabled>
+                <div class="checkboxes">
+                    <label><input type="checkbox" value="2" onchange="calculateSum('treasury')"> Вода Україна (2%)</label><br>
+                    <label><input type="checkbox" value="3" onchange="calculateSum('treasury')"> Вода Глобал (3%)</label><br>
+                    <label><input type="checkbox" value="2.5" onchange="calculateSum('treasury')"> БН $ (2.50%)</label><br>
+                    <label><input type="checkbox" value="2.2" onchange="calculateSum('treasury')"> БН € (2.20%)</label><br>
+                    <label><input type="checkbox" value="2.3" onchange="calculateSum('treasury')"> USDT (2.30%)</label><br>
+                    <label><input type="checkbox" value="0.4" onchange="calculateSum('treasury')"> Вітер НР - Mau (0.40%)</label><br>
+                    <label><input type="checkbox" value="0.75" onchange="calculateSum('treasury')"> Вітер НР Payally (0.75%)</label><br>
+                    <label><input type="checkbox" value="0.4" onchange="calculateSum('treasury')"> Вітер НР Adriatic (0.40%)</label><br>
+                    <label><input type="checkbox" value="0.5" onchange="calculateSum('treasury')"> Оф. Ком банк - Adriatic (0.50%)</label><br>
+                    <label><input type="checkbox" value="0.6" onchange="calculateSum('treasury')"> Брокери - MSL (0.60%)</label><br>
+                    <label><input type="checkbox" value="0.5" onchange="calculateSum('treasury')"> Брокери - T-M (0.50%)</label><br>
+                    <label><input type="checkbox" value="0.1" onchange="calculateSum('treasury')"> Брокери - Укр. (0.10%)</label><br>
+                    <label><input type="checkbox" value="0.1" onchange="calculateSum('treasury')"> Агентські (0.10%)</label><br>
+                    <label><input type="checkbox" value="0.1" onchange="calculateSum('treasury')"> Утримання компаній НР (0.10%)</label><br>
+                    <label><input type="checkbox" value="0.5" onchange="calculateSum('treasury')"> Утримання компаній резидентів (0.50%)</label><br>
+                    <label><input type="checkbox" value="1.60" onchange="calculateSum('treasury')"> Криптофр. Платіжки - Banxy (1.60%)</label><br>
+                    <label><input type="checkbox" value="1.85" onchange="calculateSum('treasury')"> Криптофр. Платіжки - Axom (1.85%)</label><br>
+                    <label><input type="checkbox" value="1.13" onchange="calculateSum('treasury')"> Криптофр. Платіжки - Payally (1.13%)</label><br>
+                    <label><input type="checkbox" value="0.3" onchange="calculateSum('treasury')"> Криптофр. Платіжки - OneGate (0.30%)</label><br>
+                </div>
+            </div>
+            
+            <div class="column">
+                <h2>Крипто Платежі</h2>
+                <input type="text" class="display" id="cryptoDisplay" disabled>
+                <div class="checkboxes">
+                    <label><input type="checkbox" value="2" onchange="calculateSum('crypto')"> Вода Україна (2%)</label><br>
+                    <label><input type="checkbox" value="3" onchange="calculateSum('crypto')"> Вода Глобал (3%)</label><br>
+                    <label><input type="checkbox" value="2.5" onchange="calculateSum('crypto')"> БН $ (2.50%)</label><br>
+                    <label><input type="checkbox" value="2.2" onchange="calculateSum('crypto')"> БН € (2.20%)</label><br>
+                    <label><input type="checkbox" value="2.3" onchange="calculateSum('crypto')"> USDT (2.30%)</label><br>
+                    <label><input type="checkbox" value="0.4" onchange="calculateSum('crypto')"> Вітер НР - Mau (0.40%)</label><br>
+                    <label><input type="checkbox" value="0.75" onchange="calculateSum('crypto')"> Вітер НР Payally (0.75%)</label><br>
+                    <label><input type="checkbox" value="0.4" onchange="calculateSum('crypto')"> Вітер НР Adriatic (0.40%)</label><br>
+                    <label><input type="checkbox" value="0.5" onchange="calculateSum('crypto')"> Оф. Ком банк - Adriatic (0.50%)</label><br>
+                    <label><input type="checkbox" value="0.6" onchange="calculateSum('crypto')"> Брокери - MSL (0.60%)</label><br>
+                    <label><input type="checkbox" value="0.5" onchange="calculateSum('crypto')"> Брокери - T-M (0.50%)</label><br>
+                    <label><input type="checkbox" value="0.1" onchange="calculateSum('crypto')"> Брокери - Укр. (0.10%)</label><br>
+                    <label><input type="checkbox" value="0.1" onchange="calculateSum('crypto')"> Агентські (0.10%)</label><br>
+                    <label><input type="checkbox" value="0.1" onchange="calculateSum('crypto')"> Утримання компаній НР (0.10%)</label><br>
+                    <label><input type="checkbox" value="0.5" onchange="calculateSum('crypto')"> Утримання компаній резидентів (0.50%)</label><br>
+                    <label><input type="checkbox" value="1.60" onchange="calculateSum('crypto')"> Криптофр. Платіжки - Banxy (1.60%)</label><br>
+                    <label><input type="checkbox" value="1.85" onchange="calculateSum('crypto')"> Криптофр. Платіжки - Axom (1.85%)</label><br>
+                    <label><input type="checkbox" value="1.13" onchange="calculateSum('crypto')"> Криптофр. Платіжки - Payally (1.13%)</label><br>
+                    <label><input type="checkbox" value="0.3" onchange="calculateSum('crypto')"> Криптофр. Платіжки - OneGate (0.30%)</label><br>
+                </div>
+            </div>
+        </div>
+
+        <!-- Кнопка для очищення -->
+        <div class="buttons">
+            <button onclick="clearDisplay()">Скинути</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
